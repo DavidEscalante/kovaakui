@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Kovaak: Tammas Training</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#000;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, width=3072" />
+	<link href='https://fonts.googleapis.com/css?family=Orbitron:700&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Baloo+Da+2&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Orbitron&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Encode+Sans&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Chakra+Petch&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Aldrich&subset=latin' rel='stylesheet' type='text/css'>
+	<style>
+@font-face {
+    font-family: 'UAV OSD Sans Mono';
+    src: url('index.hyperesources/UAV-OSD-Sans-Mono.eot');
+    src: url('index.hyperesources/UAV-OSD-Sans-Mono.eot?#iefix') format('embedded-opentype'),
+        url('index.hyperesources/UAV-OSD-Sans-Mono.woff2') format('woff2'),
+        url('index.hyperesources/UAV-OSD-Sans-Mono.woff') format('woff'),
+        url('index.hyperesources/UAV-OSD-Sans-Mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+</style>
+	<script type="text/javascript" src="index.hyperesources/HypeBlendModes.min.js"></script>
+<script type="text/javascript" src="index.hyperesources/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.hyperesources/Chart.js"></script>
+<style type="text/css">
+.noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+}
+    .quaddark {
+        fill: #4A4F4D;
+    }
+    .quadwhite {
+        fill: #b7c0bf;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 5px 5px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 0px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-family: Chakra Petch;
+        font-size: 64px;
+        background-color: #303537;
+        color: #cdff00;
+        text-align: center;
+    }
+</style>
+<script type="text/javascript">
+// Variable to check if fullscreen is on/off
+let isfullscreen = false;
+
+// Function to scale the Hype document based on window size
+function scaleSite() {
+  const hypeContainer = $("#" + window.myHypeContainerId);
+  const containerWidth = hypeContainer.width();
+  const containerHeight = hypeContainer.height();
+  const parentWidth = hypeContainer.parent().width();
+  const parentHeight = hypeContainer.parent().height();
+  const scaleWidth = parentWidth / containerWidth;
+  const scaleHeight = parentHeight / containerHeight;
+  const scale = Math.min(scaleWidth, scaleHeight);
+  const left =
+    containerWidth * scale < parentWidth
+      ? (parentWidth - containerWidth * scale) / 2 + "px"
+      : "0px";
+  const top =
+    containerHeight * scale < parentHeight
+      ? (parentHeight - containerHeight * scale) / 2 + "px"
+      : "0px";
+
+  hypeContainer.css({
+    transformOrigin: "0% 0%",
+    transform: "scale(" + scale + ")",
+    left: left,
+    top: top,
+  });
+}
+
+// Function to check if scaling is possible
+function isScalePossible() {
+  return (
+    "MozTransform" in document.body.style ||
+    "webkitTransform" in document.body.style ||
+    "msTransform" in document.body.style ||
+    "OTransform" in document.body.style ||
+    "transform" in document.body.style ||
+    "Transform" in document.body.style
+  );
+}
+
+// HypeDocumentLoad event callback function
+function myCallback(hypeDocument, element, event) {
+  if (isScalePossible()) {
+    window.myHypeContainerId = hypeDocument.documentId();
+    const hypeContainer = $("#" + window.myHypeContainerId);
+    hypeContainer.css({ margin: 0 });
+    scaleSite();
+    $(window).resize(scaleSite);
+  }
+  return true;
+}
+
+// Add HypeDocumentLoad event listener
+if (!("HYPE_eventListeners" in window)) {
+  window.HYPE_eventListeners = [];
+}
+window.HYPE_eventListeners.push({
+  type: "HypeDocumentLoad",
+  callback: myCallback,
+});
+</script>
+<audio id="ambient01" src="index.hyperesources/external_hd_4_dual_channel.mp3" autoplay="autoplay"></audio>
+<audio id="ambient02" src="index.hyperesources/sfxw001_indoor_basement_neutral_sound.mp3" autoplay="autoplay"></audio>
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:3072px;height:1080px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?36903"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>COPY DATA
+</div>
+		<div></div>
+		<div></div>
+		<div>SCORE
+</div>
+		<div>REFRESH DATA
+</div>
+		<div>DELETE
+</div>
+		<div>CHANGE STAGE
+</div>
+		<div>ADD
+</div>
+		<div></div>
+		<div>AIM TRAINING</div>
+		<div>02</div>
+		<div>AIMLAB / KOVAAK
+</div>
+		<div>_____
+</div>
+		<div>00
+</div>
+		<div>06</div>
+		<div></div>
+		<div>03</div>
+		<div>_____
+</div>
+		<div>04</div>
+		<div>_____
+</div>
+		<div>_____
+</div>
+		<div>_____
+</div>
+		<div>01</div>
+		<div>05</div>
+		<div>_____
+</div>
+		<div>IMPORTING DATA</div>
+		<div>DONE</div>
+		<div>00000000
+</div>
+		<div></div>
+		<div></div>
+		<div>PLAYER'S AVERAGE
+</div>
+		<div>TRAINING FEED [</div>
+		<div>]
+</div>
+		<div>00</div>
+		<div>----
+</div>
+		<div>-------
+</div>
+		<div>TARGET
+</div>
+		<div>TRAINING PROGRAM BY VOLTAIC
+</div>
+		<div>0
+</div>
+		<div>0.0
+</div>
+		<div>00000000000000
+</div>
+		<div>PERSONAL MEDIAN PERFORMANCE
+</div>
+		<div>-
+</div>
+		<div>PERSONAL SCORE
+</div>
+		<div>0000
+ DPI
+</div>
+		<div>0
+</div>
+		<div>KOVAAK 2.0
+</div>
+		<div>// -----
+
+</div>
+		<div>0
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
