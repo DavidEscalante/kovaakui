@@ -1,6 +1,6 @@
 # CUSTION UI FOR KOVAAK 2.0
-**Live site: https://davidescalante.github.io/kovaakui/
-**
+Live site: https://davidescalante.github.io/kovaakui/
+
 This is a UI I created for personal tracking of my average performance on selected scenarios. Currently, it only supports six scenarios, but that's enough for me since I only use this UI for specific scenarios where I require more focus.
 
 I created this UI before KovaaK included graphs to track performance, but even with the current KovaaK graphs, I can't control how the data is displayed.
