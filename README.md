@@ -1,15 +1,29 @@
 # CUSTOM UI FOR KOVAAK 2.0
 Live site: https://davidescalante.github.io/kovaakui/
 
-This is a UI I created for personal tracking of my average performance on selected scenarios. Currently, it only supports six scenarios, but that's enough for me since I only use this UI for specific scenarios where I require more focus.
+I created a UI for personal performance tracking on specific scenarios. It supports six scenarios, which is enough for my focused use.
 
-I created this UI before Kovaak included graphs to track performance, but even with the current Kovaak graphs, I can't control how the data is displayed.
+Unlike Kovaak's graphs, I have control over data display. The UI features
+- a blue line for goal
+- an orange line for current average performance
+- and a red overlay for world average.
 
-- With this UI, I can set a goal which is displayed by a blue line.
-- The UI also shows my current average performance, displayed by an orange line
-- The world average, displayed by a red overlay. 
+It provides a clearer view of my standing, overall performance, and score consistency compared to Kovaak's graph. 
 
-This way, I have a better view of where I currently stand, my overall performance during the entire training session, and how consistent my scores are. The Kovaak graph tends to zoom in on the latest scores, so even small deviations are visually overreacted compared to everything else. This UI helps me keep a better perception of my performance, whether it's good or bad.
-
-The UI uses this Google Sheets as database:
+It uses a this Google Sheets as database:
 https://docs.google.com/spreadsheets/d/1j_JSnxNXp-
+
+# OBS WIDGET
+Using Node.JS is possible to feed and control the Kovaak site using the content inside the remote directory.
+
+It needs:
+- Node.JS
+- socket.io
+
+Once you have both installed, just can run server.js using `node server.js`. You should be able to access to both Kovaak widget and control panel from these URLs:
+`http://localhost:3000/kovaakui/`
+`http://localhost:3000/remote/`
+
+To load it on OBS, load it as browser and use KovaakUI URL `http://localhost:3000/kovaakui/`
+
+Once is loaded withing OBS, you should be able to externally control it using `http://localhost:3000/remote/`
