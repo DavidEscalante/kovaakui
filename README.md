@@ -9,9 +9,7 @@ Unlike Kovaak's graphs, I have control over data display. The UI features
 - and a red overlay for world average.
 
 It provides a clearer view of my standing, overall performance, and score consistency compared to Kovaak's graph. 
-
-It uses a this Google Sheets as database:
-[https://docs.google.com/spreadsheets/d/1j_JSnxNXp-](https://docs.google.com/spreadsheets/d/1j_JSnxNXp-UwljH1nFSTLrWN1VkBmL1V_HF854YxEHY/edit?usp=sharing)
+[It uses a this Google Sheets as database:j_JSnxNXp-](https://docs.google.com/spreadsheets/d/1j_JSnxNXp-UwljH1nFSTLrWN1VkBmL1V_HF854YxEHY/edit?usp=sharing)
 
 # OBS WIDGET
 Using Node.JS is possible to feed and control the Kovaak site using the content inside the remote directory.
